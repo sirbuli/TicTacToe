@@ -1,0 +1,136 @@
+$color-background-item: #ddcece;
+$color-background-item-hover: #c7bbbb;
+$color-background-btn: #9a9696;
+$color-x: #eb1d80;
+$color-o: #6f00ff;
+
+$gradient: linear-gradient(to bottom, #dee2de, #353937);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-image: $gradient;
+  height: 100vh;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  &__hidden {
+    display: none;
+  }
+
+  &__playing {
+    width: 3rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  &__winner {
+    color: #135013;
+    margin-top: 5rem;
+  }
+
+  &__draw {
+    color: #000;
+    margin-top: 5rem;
+  }
+
+  &__lose {
+    color: #771818;
+    margin-top: 5rem;
+  }
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: repeat(3, 10rem);
+  grid-gap: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 2.5rem;
+
+  &__item {
+    background-color: $color-background-item;
+    border: 2px solid #2c2a2a;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color: $color-background-item-hover;
+    }
+
+    &__filled--X {
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        height: 0.5rem;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        background-color: $color-x;
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
+
+    &__filled--O::before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      border: 5px solid $color-o;
+      width: 75%;
+      height: 75%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.btn {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: $color-background-btn;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 2s;
+}
