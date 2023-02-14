@@ -4,4 +4,4 @@ PvP - You can play with other player
 Easy - Playing with computer, it's very easy level
 Medium - Playing with computer, it's medium level
 
-The button "Reset the game" is for reset and play again!
+The button "Play again" is for reset the game and play again!
