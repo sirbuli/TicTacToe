@@ -1,6 +1,6 @@
 Do you want to play the game TicTacToe? Here you are!
 
-I create 3 moode:
+I created 3 mode:
 
 PvP - You can play with other player
 
