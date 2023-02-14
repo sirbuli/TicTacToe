@@ -15,7 +15,6 @@ $gradient: linear-gradient(to bottom, #dee2de, #353937);
 body {
   font-family: "Nunito Sans", sans-serif;
   background-image: $gradient;
-  height: 100vh;
 }
 
 .player {
@@ -25,8 +24,7 @@ body {
   font-size: 3rem;
   font-weight: 700;
   align-items: center;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 3rem;
 
   &__hidden {
     display: none;
@@ -41,31 +39,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .panel {
-  display: flex;
+  display: none;
   justify-content: center;
   height: 5rem;
   font-size: 3rem;
   font-weight: 700;
   align-items: center;
-  padding: 1rem;
-  padding-top: 2rem;
+  padding: 3rem;
 
   &__winner {
+    display: flex;
     color: #135013;
-    margin-top: 5rem;
   }
 
   &__draw {
+    display: flex;
     color: #000;
-    margin-top: 5rem;
   }
 
   &__lose {
+    display: flex;
     color: #771818;
-    margin-top: 5rem;
   }
 }
 
@@ -76,7 +74,6 @@ body {
   grid-gap: 1rem;
   border-radius: 0.5rem;
   padding: 1rem;
-  margin-top: 2.5rem;
 
   &__item {
     background-color: $color-background-item;
@@ -126,11 +123,12 @@ body {
 
 .btn {
   font-size: 1.6rem;
-  margin-top: 1rem;
   padding: 0.5rem;
   background-color: $color-background-btn;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 2s;
+  margin-top: 0.5rem;
+  padding: 1rem;
 }
